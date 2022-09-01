@@ -1,0 +1,49 @@
+
+.bg{
+    background-image:url('https://gifs.eco.br/wp-content/uploads/2022/07/gifs-animados-de-gotas-de-agua-4.gif');
+    min-height: 789px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.margem{
+    
+    padding-top: 100px;
+}
+
+.borda{
+    border-radius: 20px;
+}
+
+.bg-m{
+    background-color: #acd1f2;
+}
+
+.font-c{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#055BA6;  
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(5, 5, 5);  
+    
+    
+}
+
+.c-c{
+    color: #034e91;
+}
+
+::placeholder{
+    color: #034e91;
+
+}
+
+.form-control-icon {
+    color: var(--cg-400);
+  }
+
+.color-b{
+    background-color: #034e91;
+}
