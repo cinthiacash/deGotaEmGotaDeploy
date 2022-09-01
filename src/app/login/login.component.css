@@ -1,0 +1,50 @@
+
+.bg{
+    background-image: url('https://i.imgur.com/guwAn30.jpg');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 935px;
+}
+
+.margem{
+    
+    padding-top: 200px;
+}
+
+.caixa{
+    background-color: #5ba9d9b2;
+    border-radius: 5%;
+    
+}
+
+.bg-m{
+    background-color: #ffffff77;
+}
+
+.font-c{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #034e91;    
+    
+    
+}
+
+.c-c{
+    color: #034e91;
+}
+
+::placeholder{
+    color: #034e91;
+
+}
+
+.form-control-icon {
+    color: var(--cg-400);
+  }
+
+.color-b{
+    background-color: #034e91;
+}
