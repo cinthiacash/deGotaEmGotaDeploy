@@ -10,11 +10,12 @@
 
 .margem{
     
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 .borda{
     border-radius: 20px;
+
 }
 
 .bg-m{
@@ -26,7 +27,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:#055BA6;  
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(5, 5, 5);  
+    -webkit-text-stroke-color: rgb(252, 249, 249);  
     
     
 }
@@ -46,4 +47,26 @@
 
 .color-b{
     background-color: #034e91;
+}
+
+span{
+    position: absolute;
+    margin-left: 12px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+}
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+
+.bot-can{
+    background-color: #BFA678;
+    color: brown;
+}
+
+.bot-cad{
+    background-color: #6E8C03;
+    color: rgb(5, 77, 21);
 }
