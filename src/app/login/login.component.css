@@ -42,9 +42,6 @@
 
 }
 
-.form-control-icon {
-    color: var(--cg-400);
-  }
 
 .color-b{
     background-color: #034e91;
@@ -54,3 +51,15 @@
     font-family: 'Tangerine', serif;
     text-shadow: 4px 4px 4px #aaa;
   }
+
+span{
+    position: absolute;
+    margin-left: 12px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+}
+.form-group .form-control {
+    padding-left: 2.375rem;
+}

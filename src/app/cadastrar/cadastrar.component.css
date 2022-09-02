@@ -70,3 +70,12 @@ span{
     background-color: #6E8C03;
     color: rgb(5, 77, 21);
 }
+
+.montagem{
+
+    padding-top: 100px;
+    width: 800px;
+    position:relative;
+	left: 5%;
+	
+	}
