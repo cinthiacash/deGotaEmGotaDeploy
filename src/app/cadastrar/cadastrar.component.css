@@ -1,17 +1,13 @@
 
 .bg{
-    background-image:url('https://gifs.eco.br/wp-content/uploads/2022/07/gifs-animados-de-gotas-de-agua-4.gif');
-    min-height: 789px;
+    background-image:url('https://i.imgur.com/Cd7M9WW.jpg');
+    min-height: 937px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
-.margem{
-    
-    padding-top: 70px;
-}
 
 .borda{
     border-radius: 20px;
@@ -19,25 +15,27 @@
 }
 
 .bg-m{
-    background-color: #acd1f2;
+    background-color: #2d618fa2;
 }
 
 .font-c{
     
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:#055BA6;  
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(252, 249, 249);  
+    color:#f8fafc;  
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(66, 76, 165);  
     
     
 }
 
 .c-c{
-    color: #034e91;
+    color: #0613ca;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color:#1c1d1c;
 }
 
 ::placeholder{
-    color: #034e91;
+    color: #d8e1e7;
 
 }
 
@@ -46,7 +44,7 @@
   }
 
 .color-b{
-    background-color: #034e91;
+    background-color: #17466e;
 }
 
 span{
@@ -56,17 +54,16 @@ span{
     display: flex;
     align-items: center;
     padding-top: 12px;
+    color: #3ff826;
 }
 .form-group .form-control {
     padding-left: 2.375rem;
 }
 
-.bot-can{
-    background-color: #BFA678;
-    color: brown;
+.caixa{
+    background-color: rgba(231, 231, 231, 0.363);
+    border-radius: 20px;
+   
+   
 }
 
-.bot-cad{
-    background-color: #6E8C03;
-    color: rgb(5, 77, 21);
-}
