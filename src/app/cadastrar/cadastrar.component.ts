@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
+  isCpf: boolean = true
+
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+
   }
+
+  onChangeCheckBox(){
+  
+  if(this.isCpf == false){
+    this.isCpf = true
+  }
+  else{
+    this.isCpf = false
+  }
+}
 
 }
