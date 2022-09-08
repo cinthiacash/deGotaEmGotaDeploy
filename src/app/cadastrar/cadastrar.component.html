@@ -10,27 +10,27 @@
                     <div class="form-group">
                         <label for="nome"></label>
                         <span class="fa fa-user"></span>
-                        <input type="text" class="form-control borda bg-m icon" name="nome" id="nome"
+                        <input [(ngModel)]='user.nome' type="text" class="form-control borda bg-m icon" name="nome" id="nome"
                             placeholder="Digite seu nome">
                     </div>
                     <div class="form-group">
                         <label for="usuario"></label>
                         <span class="fa fa-envelope"></span>
-                        <input type="text" class="form-control borda bg-m" name="usuario" id="usuario"
+                        <input [(ngModel)]='user.usuario' type="text" class="form-control borda bg-m" name="usuario" id="usuario"
                             placeholder="Digite seu email ">
                     </div>
 
                     <div class="form-group">
                         <label for="senha"></label>
                         <span class="fa fa-lock"></span>
-                        <input type="password" class="form-control borda bg-m" name="senha" id="senha"
+                        <input [(ngModel)]='user.senha' type="password" class="form-control borda bg-m" name="senha" id="senha"
                             placeholder="Digite sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="foto"></label>
                         <span class="fa fa-link"></span>
-                        <input type="text" class="form-control borda bg-m" name="foto" id="foto"
+                        <input [(ngModel)]='user.foto' type="text" class="form-control borda bg-m" name="foto" id="foto"
                             placeholder="Link da sua foto">
                     </div>
 
@@ -38,14 +38,14 @@
                     <div class="form-group" *ngIf="isCpf">
                         <label for="cpf"></label>
                         <span class="fa fa-id-card-o"></span>
-                        <input type="text" class="form-control borda bg-m" name="cpf" id="cpf"
+                        <input [(ngModel)]='user.usuarioCpf' type="text" class="form-control borda bg-m" name="cpf" id="cpf"
                             placeholder="Digite seu CPF" maxlength="11">
                     </div>
 
                     <div class="form-group" *ngIf="!isCpf">
                         <label for="cpf"></label>
                         <span class="fa fa-id-card-o"></span>
-                        <input type="text" class="form-control borda bg-m" name="cpf" id="cpf"
+                        <input [(ngModel)]='user.usuarioCnpj' type="text" class="form-control borda bg-m" name="cpf" id="cpf"
                             placeholder="Digite seu CNPJ" maxlength="14">
                     </div>
 
@@ -57,7 +57,7 @@
                       </div>
 
                     <div>
-                        <button type="submit" class="btn btn-success borda container-fluid mt-4">CADASTRAR</button>
+                        <button type="submit" class="btn btn-success borda container-fluid mt-4" (click)="cadastrar()">CADASTRAR</button>
                     </div>
 
                     <div class="d-flex justify-content-center m-b">
