@@ -16,6 +16,8 @@ import { SubtemasComponent } from './subtemas/subtemas.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { FeedComponent } from './feed/feed.component';
+import { SessaoOdsComponent } from './sessao-ods/sessao-ods.component';
+import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FeedComponent } from './feed/feed.component';
     SubtemasComponent,
     MenuUsuarioComponent,
     PostagemComponent,
-    FeedComponent
+    FeedComponent,
+    SessaoOdsComponent,
+    SessaoMissaoComponent
   ],
   imports: [
     BrowserModule,

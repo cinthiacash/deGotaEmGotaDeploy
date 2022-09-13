@@ -7,6 +7,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { MenuComponent } from './menu/menu.component';
+import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
+import { SessaoOdsComponent } from './sessao-ods/sessao-ods.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio',pathMatch: 'full'},
@@ -16,7 +18,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'menu-usuario', component: MenuUsuarioComponent},
-  {path: 'feed', component: FeedComponent}
+  {path: 'feed', component: FeedComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'sessao-ods', component: SessaoOdsComponent},
+  {path: 'sessao-missao', component: SessaoMissaoComponent}
  
 ];
 

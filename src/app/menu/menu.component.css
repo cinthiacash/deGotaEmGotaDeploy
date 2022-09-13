@@ -1,5 +1,5 @@
 .nav-bg{
-    background-color: rgba(0, 255, 255, 0.318);
+    background-color: #6E8C03;
 }
 
 .logo{
@@ -51,4 +51,8 @@ button:hover{
 
 .menu form button i{
     color: var(--violeta);
+}
+
+.fs-menu{
+    font-size: 24px;
 }
