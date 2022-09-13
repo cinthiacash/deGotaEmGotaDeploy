@@ -12,6 +12,10 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
+import { SubtemasComponent } from './subtemas/subtemas.component';
+import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
+import { PostagemComponent } from './postagem/postagem.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +25,17 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CadastrarComponent,
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    SubtemasComponent,
+    MenuUsuarioComponent,
+    PostagemComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
