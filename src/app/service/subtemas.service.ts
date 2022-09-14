@@ -1,9 +1,36 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import { Subtema } from '../model/Subtema';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubtemasService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+
+  getAllSubtemas(): Observable<Subtema[]> {
+    return this.http.get<Subtema[]>('https://degotaemgota.herokuapp.com/subtemas', this.token)
+
+  }
+
+  getByIdSubtema(id: number): Observable<Subtema> {
+    return this.http.get<Subtema>(`https://degotaemgota.herokuapp.com/subtemas/${id}`, this.token)
+  }
+
+  postSubtema(subtema: Subtema): Observable<Subtema> {
+    return this.http.post<Subtema>('https://degotaemgota.herokuapp.com/subtemas', subtema, this.token)
+
+  }
+
+
+
+
 }
+

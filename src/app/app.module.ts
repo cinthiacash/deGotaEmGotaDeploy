@@ -16,6 +16,10 @@ import { SubtemasComponent } from './subtemas/subtemas.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { FeedComponent } from './feed/feed.component';
+import { SubtemasEditComponent } from './edit/subtemas-edit/subtemas-edit.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { SubtemasDeleteComponent } from './delete/subtemas-delete/subtemas-delete.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { FeedComponent } from './feed/feed.component';
     SubtemasComponent,
     MenuUsuarioComponent,
     PostagemComponent,
-    FeedComponent
+    FeedComponent,
+    SubtemasEditComponent,
+    PostagemEditComponent,
+    SubtemasDeleteComponent,
+    PostagemDeleteComponent
   ],
   imports: [
     BrowserModule,

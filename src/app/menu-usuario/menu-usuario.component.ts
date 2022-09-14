@@ -15,6 +15,7 @@ export class MenuUsuarioComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   sair(){
     this.router.navigate(['/inicio'])
     environment.token = ''
