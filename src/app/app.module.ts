@@ -18,6 +18,9 @@ import { PostagemComponent } from './postagem/postagem.component';
 import { FeedComponent } from './feed/feed.component';
 import { SessaoOdsComponent } from './sessao-ods/sessao-ods.component';
 import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
+import { SessaoParceirosComponent } from './sessao-parceiros/sessao-parceiros.component';
+import { SessaoIdealizadorasComponent } from './sessao-idealizadoras/sessao-idealizadoras.component';
+import { SessaoContatoComponent } from './sessao-contato/sessao-contato.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
     PostagemComponent,
     FeedComponent,
     SessaoOdsComponent,
-    SessaoMissaoComponent
+    SessaoMissaoComponent,
+    SessaoParceirosComponent,
+    SessaoIdealizadorasComponent,
+    SessaoContatoComponent
   ],
   imports: [
     BrowserModule,
