@@ -21,6 +21,8 @@ export class MenuUsuarioComponent implements OnInit {
     environment.token = ''
     environment.nome = ''
     environment.id = 0
+    environment.usuario = ''
   }
+
 
 }

@@ -1,3 +1,7 @@
 .bg-menu{
     background-color: #00B7DA;
 }
+
+a{
+    cursor: pointer;
+}
