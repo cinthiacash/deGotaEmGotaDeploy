@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
  
+.btn{
+  background-color: #00B7DA;
+}
+
 .bg {
    background-image: url('https://i.imgur.com/27WzwKs.jpg');
    background-repeat: no-repeat;
@@ -29,3 +33,4 @@
   text-align: center;
   
  }
+
