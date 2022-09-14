@@ -1,4 +1,7 @@
 .bg{
-    background-color: rgb(181, 196, 223);
+    background-color:#ACD1F2;
+    width:100%;
+    min-height: 100vh;
+    background-size: cover;
 }
 

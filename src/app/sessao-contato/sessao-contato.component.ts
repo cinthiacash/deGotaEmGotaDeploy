@@ -10,7 +10,6 @@ export class SessaoContatoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.scroll(0,0)
   }
 
 }

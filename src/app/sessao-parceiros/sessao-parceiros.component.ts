@@ -9,10 +9,6 @@ export class SessaoParceirosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
-    window.scroll(0,0)
-    
-  }
+  ngOnInit() {}
 
 }

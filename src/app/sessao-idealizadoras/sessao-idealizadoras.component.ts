@@ -9,8 +9,6 @@ export class SessaoIdealizadorasComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    window.scroll(0,0)
-  }
+  ngOnInit() {}
 
 }
