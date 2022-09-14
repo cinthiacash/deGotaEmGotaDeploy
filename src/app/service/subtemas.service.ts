@@ -29,6 +29,14 @@ export class SubtemasService {
 
   }
 
+  putSubtema(subtema: Subtema): Observable<Subtema> {
+    return this.http.put<Subtema>('https://degotaemgota.herokuapp.com/subtemas', subtema, this.token)
+  }
+
+  deleteSubtema(id: number) {
+    return this.http.delete(`https://degotaemgota.herokuapp.com/subtemas/${id}`, this.token)
+  }
+
 
 
 

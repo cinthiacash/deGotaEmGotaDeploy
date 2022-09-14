@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { SubtemasDeleteComponent } from './delete/subtemas-delete/subtemas-delete.component';
+import { SubtemasEditComponent } from './edit/subtemas-edit/subtemas-edit.component';
 import { FeedComponent } from './feed/feed.component';
-import { HomeComponent } from './home/home.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
@@ -16,7 +17,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'menu-usuario', component: MenuUsuarioComponent},
-  {path: 'feed', component: FeedComponent}
+  {path: 'feed', component: FeedComponent},
+  {path: 'subtemas-edit/:id', component: SubtemasEditComponent},
+  {path: 'subtemas-delete/:id', component: SubtemasDeleteComponent}
+  
  
 ];
 
