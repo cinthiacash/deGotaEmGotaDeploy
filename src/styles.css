@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+
 html {
     scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+    
   }
