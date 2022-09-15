@@ -18,10 +18,10 @@
           <button class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal" data-target="#novoSubtema">
             <i class="fa fa-object-group pr-2" aria-hidden="true"></i> Todos Subtemas
           </button>
-          <button class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal" data-target="#meusProjetos">
+          <button (click)="findByIdUser()" class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal" data-target="#meusProjetos">
             <i class="fa fa-book text-cg-50 pr-2" aria-hidden="true"></i> Meus Projetos
           </button>
-          <button class="w-100 text-left btn btn-blue text-cg-600 mx-3 my-1 px-3 text-white" routerLink='/'>
+          <button class="w-100 text-left btn btn-blue text-cg-600 mx-3 my-1 px-3 text-white" [routerLink]="['/user-edit', id]">
             <i class="fa fa-pencil-square-o pr-2" aria-hidden="true"></i> Editar perfil
           </button>
         </div>
@@ -197,7 +197,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor='let item of listaPostagens'>
+                      <tr *ngFor='let item of user.postagens'>
                         <th>{{item.id}}</th>
                         <td>{{item.titulo}}</td>
                         <td class="d-flex justify-content-end">

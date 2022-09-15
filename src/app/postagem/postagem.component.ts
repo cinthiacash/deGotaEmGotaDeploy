@@ -33,10 +33,11 @@ export class PostagemComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
-  nomePostagem: string
-  listaTitulo: Postagem[]
+  tituloPostagem: string
 
-
+  key = 'data'
+  reverse = true
+  
 
   constructor(
     private router: Router,
@@ -55,7 +56,7 @@ export class PostagemComponent implements OnInit {
   }
 
   findAllPostagens(){
-    console.log(this.postagem.foto)
+  
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
       this.listaPostagens = resp
     })
@@ -67,6 +68,8 @@ export class PostagemComponent implements OnInit {
       this.user = resp
     })
    }
+
+
 
    
 

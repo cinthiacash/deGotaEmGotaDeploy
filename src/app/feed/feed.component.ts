@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Subtema } from '../model/Subtema';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { SubtemasService } from '../service/subtemas.service';
@@ -18,6 +19,7 @@ export class FeedComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
   usuario = environment.usuario
+  id = environment.id
 
   user: User = new User()
   idUser = environment.id
@@ -30,11 +32,15 @@ export class FeedComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private authService: AuthService,
     private subtemasService: SubtemasService,
-    private postagemService: PostagemService 
+    private postagemService: PostagemService,
+    private alertas: AlertasService
 
   ) { }
 
@@ -82,14 +88,14 @@ export class FeedComponent implements OnInit {
     this.subtemasService.postSubtema(this.subtema).subscribe({
       next: (resp:Subtema) =>{
       this.subtema = resp
-      alert('Tema cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
       this.subtema = new Subtema()
       this.findAllSubtemas()
 
       },
       error: (erro) => {
         if(erro.status == 400){
-          alert('Tema não pode ser cadastrado pois já existe um tema com está descrição');
+          this.alertas.showAlertDanger('Tema não pode ser cadastrado pois já existe um tema com está descrição');
         }
       },
     })
@@ -105,7 +111,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.findAllPostagens()
 

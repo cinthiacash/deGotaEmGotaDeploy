@@ -5,6 +5,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { SubtemasDeleteComponent } from './delete/subtemas-delete/subtemas-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { SubtemasEditComponent } from './edit/subtemas-edit/subtemas-edit.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { FeedComponent } from './feed/feed.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'subtemas-delete/:id', component: SubtemasDeleteComponent},
   {path: 'postagem', component: PostagemComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
-  {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
+  {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
+  {path: 'user-edit/:id', component: UserEditComponent}
   
  
 ];

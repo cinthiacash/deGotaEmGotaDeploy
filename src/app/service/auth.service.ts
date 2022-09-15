@@ -23,8 +23,11 @@ export class AuthService {
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`https://degotaemgota.herokuapp.com/usuarios/${id}`)
-
+    var token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+    return this.http.get<User>(`https://degotaemgota.herokuapp.com/usuarios/${id}`, token)
+    
   }
 
   atualizarUser(user: User): Observable<User> {

@@ -31,6 +31,8 @@ export class LoginComponent implements OnInit {
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
       environment.usuario = this.userLogin.usuario
+      environment.cnpj = this.userLogin.cnpj
+      environment.cpf = this.userLogin.cpf
 
       this.router.navigate(['/feed'])
 
