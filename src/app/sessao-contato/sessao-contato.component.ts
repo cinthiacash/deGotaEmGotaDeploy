@@ -11,5 +11,8 @@ export class SessaoContatoComponent implements OnInit {
 
   ngOnInit() {
   }
+  enviar(){
+    alert('Mensagem enviada com sucesso!')
+  }
 
 }

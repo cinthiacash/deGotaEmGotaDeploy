@@ -1,32 +1,42 @@
-<div class="container-fluid  d-flex justify-content-center align-items-center bg" id=sessao-contato>
-
-    <div class="container-fluid d-flex justify-content-center pt-5 pb-5 ">
-        <div class="row d-flex justify-content-center"></div>
-        <div class="col-md-6">
-            <h3>Nosso Escritório</h3>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15801.798960679997!2d-34.879075482831226!3d-8.055522261123613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a2a565885f%3A0x802b0e52579b84b7!2sRecife%2C%20PE%2C%2050030-230!5e0!3m2!1spt-BR!2sbr!4v1663117265959!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-        </div>
-        <div class="container-fluid d-flex justify-content-center ">
-            <div class="col-md-6 ">
-                <h3>Entre em contato por nosso email</h3>
-    
-                <li>
-                    <p>
-                        <i class="fas fa-envelope-square estilo-icon"></i><a href="mailto:luanamariadaluzbarbosa@gmail.com" class="links" target="_blank">luanamariadaluzbarbosa@gmail.com</a>
-                    </p>
-    
-                </li>
+<div class="container-fluid  bg " id=sessao-contato>
+    <div class=" justify-content-center pt-5">
+        
+        <div class="row d-flex justify-content-center  pt-5 ">
+            <div class="col-md-5" id="img-bg">
+                <img class="img-fluid" src="https://i.imgur.com/oK16Twl.png" alt="">
+                
             </div>
-    
+         <div class="col-md-6">
+
+            <div class="col-md-10 ">
+                <form class="text">
+                    <h3 class="d-flex justify-content-center px-0 mb-4 "><b>Contato</b></h3>
+                    <div class="form-group  ">
+                        <label for="exampleFormControlInput1 "><b>Nome:</b></label>
+                        <input  type="nome" class="form-control " id="exampleFormControlInput1" placeholder="Seu nome">
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1"><b>Endereço de email:</b></label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                    </div>
+                    <div class="form-group"> 
+                      <label for="exampleFormControlTextarea1"><b>Assunto:</b></label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                
+                    <div class="form-group d-flex justify-content-end">
+                        <button class="btn btn-outline-primary" (click)="enviar()">Enviar</button>
+                      </div>
+          
+                  </form>
+
+            </div>
         </div>
+       </div>
 
     </div>
-
-   
 </div>
+<footer class="page-footer bg-cg-50">
+  <div class="footer-copyright py-4 text-center text-cg-500">De Gota em Gota. Todos os direitos reservados © 2022</div>
+</footer>
+
