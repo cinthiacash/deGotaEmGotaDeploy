@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 .bg{
   background-image: url('https://i.imgur.com/N4IKBHq.jpg');
   background-repeat: no-repeat;
@@ -9,6 +10,7 @@
 }
 .card {
   border-radius: 35px;
+  background-color: #055ba688;
 }
 
 img {
@@ -17,4 +19,7 @@ img {
   height: 200px;
   border-radius: 100px;
 
+}
+.text-white {
+  font-family: 'Quicksand';
 }
