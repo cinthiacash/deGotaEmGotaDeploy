@@ -1,0 +1,46 @@
+
+.borda{
+    border-radius: 20px;
+
+}
+
+.font-c{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#f8fafc;  
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(66, 76, 165);  
+    
+    
+}
+
+.c-c{
+    color: #0613ca;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color:#1c1d1c;
+}
+
+.form-control-icon {
+    color: var(--cg-400);
+  }
+
+span{
+    position: absolute;
+    margin-left: 12px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    color: #3ff826;
+}
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+
+.caixa{
+    background-color: rgba(231, 231, 231, 0.363);
+    border-radius: 20px;
+   
+   
+}
+

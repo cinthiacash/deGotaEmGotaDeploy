@@ -1,0 +1,26 @@
+.borda{
+    border: 3px solid rgb(20, 2, 152);
+    margin: auto;
+}
+
+.size-card{
+    height: 530px;
+}
+
+
+.btn-lg:hover {
+    background-color: rgba(4, 155, 107, 0.666);
+}
+
+
+.card{
+    background-color: rgba(115, 179, 248, 0.532);
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }

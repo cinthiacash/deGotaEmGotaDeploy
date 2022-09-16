@@ -1,1 +1,37 @@
-<p>postagem works!</p>
+<div class="container-fluid">
+    <a routerLink='/feed' class="text-primary text-left">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>voltar
+    </a>
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+
+            <div class="form-group d-flex justify-content-end">
+                <input [(ngModel)] = 'tituloProjeto' type="text" class="form-control mr-4" id="titulo" placeholder="Consulte os projetos por TÍTULO" (keyup)="findByTituloProjeto()">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+        <div class="row ml-4 mr-4 w-100">
+            <div class="card-columns">
+                <div class="card text-center " *ngFor='let item of listaPostagens | orderBy: key: reverse'>
+                    <div class="card-body ">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <small class="text-muted"> Tema: {{item.subtemas.descricao}}</small>
+                        <p class="card-text mt-3">{{item.texto}}</p>
+                        <p class="card-text"><small class="text-muted">
+                                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+                            </small></p>
+                        <p class="card-text">
+                            <small class="text-muted">by: {{item.usuarios.nome}}</small>
+                        </p>
+                        <ng-container *ngIf="item.foto != null">
+                            <img [src]=item.foto alt="" width="70%" class="img-fluid">
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
