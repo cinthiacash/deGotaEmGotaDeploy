@@ -44,9 +44,6 @@
 
 }
 
-.form-control-icon {
-    color: var(--cg-400);
-  }
 
 .color-b{
     background-color: #034e91;
@@ -68,6 +65,12 @@ span{
 }
 
 
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+
+
+}
 .form-group .form-control {
     padding-left: 2.375rem;
 }

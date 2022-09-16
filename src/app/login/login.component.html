@@ -6,17 +6,43 @@
         <div class="margem d-flex justify-content-center">
             <div class="caixa borda col-md-2 font-c">
 
-                <div class="text-center mb-3 mt-4">
+                <div class="text-center mt-4">
                     <h2>Bem-vinde!</h2>
                     <p>Faça seu login para acessar o conteúdo da plataforma</p>
 
                 </div>
+
 
                 <div class="form-group">
                     <label for="usuario"></label>
                     <span class="fa fa-envelope"></span>
                     <input [(ngModel)]='userLogin.usuario' type="text" class="form-control borda bg-m" name="usuario" id="usuario"
                         placeholder="Email ">
+
+               
+
+                    <div class="form-group mt-2">
+                        <label for="usuario" id="emailLabel1"></label>
+                        <span class="fa fa-envelope form-control-icon"></span>
+                        <input id="emailInput" class="form-control bg-m"
+                        type="text" name="usuario" placeholder="Insira seu email" />
+                       
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="senha"></label>
+                        <span class="fa fa-lock"></span>
+                        <input class="form-control bg-m" type="password" name="senha" id="senha" placeholder="Sua senha">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-info c-b mt-4 color-b" type="submit">Entrar</button>
+                    </div>
+
+            
+                    <p class="text-center mt-4">Não tem uma conta? <a class="c-c" routerLink="/cadastrar"><b>Crie uma!</b></a></p> 
+
                 </div>
 
                 <div class="form-group">
