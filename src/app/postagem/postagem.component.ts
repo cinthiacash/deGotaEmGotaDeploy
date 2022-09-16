@@ -28,12 +28,12 @@ export class PostagemComponent implements OnInit {
   subtema: Subtema = new Subtema()
   listaSubtemas: Subtema[]
   idSubtema: number
-  nomeSubtema: string
+  descricaoSubtema: string
  
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
-  tituloPostagem: string
+  tituloProjeto: string
 
   key = 'data'
   reverse = true
@@ -42,7 +42,8 @@ export class PostagemComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private subtemaService: SubtemasService
 
   ) { }
 
@@ -52,6 +53,7 @@ export class PostagemComponent implements OnInit {
     }
 
     this.findAllPostagens()
+    this.findAllSubtemas()
     
   }
 
@@ -63,18 +65,28 @@ export class PostagemComponent implements OnInit {
     
   }
 
+  findAllSubtemas(){
+    this.subtemaService.getAllSubtemas().subscribe((resp: Subtema[])=>{
+      this.listaSubtemas = resp
+    })
+  }
+
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp: User) =>{
       this.user = resp
     })
    }
 
+   findByTituloProjeto(){
 
+    if(this.tituloProjeto == ''){
+      this.findAllPostagens()
+    } else{
 
-   
-
-
-
+    this.postagemService.getByTituloPostagem(this.tituloProjeto).subscribe((resp: Postagem[])=>{
+      this.listaPostagens = resp
+    })}
+   }
 
 
 

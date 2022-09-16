@@ -24,6 +24,10 @@ export class SubtemasService {
     return this.http.get<Subtema>(`https://degotaemgota.herokuapp.com/subtemas/${id}`, this.token)
   }
 
+  getByDescricao(descricao: string): Observable<Subtema[]>{
+    return this.http.get<Subtema[]>(`https://degotaemgota.herokuapp.com/subtemas/${descricao}`, this.token)
+  }
+
   postSubtema(subtema: Subtema): Observable<Subtema> {
     return this.http.post<Subtema>('https://degotaemgota.herokuapp.com/subtemas', subtema, this.token)
 

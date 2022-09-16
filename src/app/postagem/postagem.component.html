@@ -6,9 +6,9 @@
         <div class="col-md-4">
 
             <div class="form-group d-flex justify-content-end">
-                <input type="text" class="form-control mr-4" id="titulo" placeholder="Consulte os projetos por título">
-                <button class=" btn btn-primary">Pesquisar</button>
+                <input [(ngModel)] = 'tituloProjeto' type="text" class="form-control mr-4" id="titulo" placeholder="Consulte os projetos por TÍTULO" (keyup)="findByTituloProjeto()">
             </div>
+
         </div>
     </div>
 
