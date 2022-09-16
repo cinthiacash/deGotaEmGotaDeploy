@@ -17,6 +17,7 @@ import { SubtemasComponent } from './subtemas/subtemas.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { FeedComponent } from './feed/feed.component';
+
 import { SubtemasEditComponent } from './edit/subtemas-edit/subtemas-edit.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { SubtemasDeleteComponent } from './delete/subtemas-delete/subtemas-delete.component';
@@ -26,6 +27,13 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
+
+=======
+import { SessaoOdsComponent } from './sessao-ods/sessao-ods.component';
+import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
+import { SessaoParceirosComponent } from './sessao-parceiros/sessao-parceiros.component';
+import { SessaoIdealizadorasComponent } from './sessao-idealizadoras/sessao-idealizadoras.component';
+import { SessaoContatoComponent } from './sessao-contato/sessao-contato.component';
 
 
 @NgModule({
@@ -41,12 +49,20 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MenuUsuarioComponent,
     PostagemComponent,
     FeedComponent,
+
     SubtemasEditComponent,
     PostagemEditComponent,
     SubtemasDeleteComponent,
     PostagemDeleteComponent,
     UserEditComponent,
     AlertasComponent
+=======
+    SessaoOdsComponent,
+    SessaoMissaoComponent,
+    SessaoParceirosComponent,
+    SessaoIdealizadorasComponent,
+    SessaoContatoComponent
+
   ],
   imports: [
     BrowserModule,

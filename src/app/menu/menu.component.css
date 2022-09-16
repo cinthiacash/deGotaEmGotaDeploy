@@ -1,5 +1,9 @@
+
 .nav-bg{
-    background-color: rgba(0, 255, 255, 0.318);
+    background-color: #ffffff88;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    
 }
 
 .logo{
@@ -49,6 +53,15 @@ button:hover{
     transform: scale(1.1);
 }
 
-.menu form button i{
-    color: var(--violeta);
+
+.fs-menu{
+    font-size: 24px;
+}
+.navbar-nav li a {
+    color:#055BA6;
+}
+
+.navbar-nav li a:hover{
+    transform: scale(1.1);
+    color: #fff;
 }

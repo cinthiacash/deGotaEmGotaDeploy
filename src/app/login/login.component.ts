@@ -36,7 +36,12 @@ export class LoginComponent implements OnInit {
       environment.cnpj = this.userLogin.cnpj
       environment.cpf = this.userLogin.cpf
 
+
       this.router.navigate(['/feed'])
+===
+
+      this.router.navigate(['/postagem'])
+
 
     }, erro =>{
       if(erro.status == 401 || erro.status == 500){
