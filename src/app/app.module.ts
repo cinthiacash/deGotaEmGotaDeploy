@@ -28,7 +28,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
-=======
+
 import { SessaoOdsComponent } from './sessao-ods/sessao-ods.component';
 import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
 import { SessaoParceirosComponent } from './sessao-parceiros/sessao-parceiros.component';
@@ -55,8 +55,7 @@ import { SessaoContatoComponent } from './sessao-contato/sessao-contato.componen
     SubtemasDeleteComponent,
     PostagemDeleteComponent,
     UserEditComponent,
-    AlertasComponent
-=======
+    AlertasComponent,
     SessaoOdsComponent,
     SessaoMissaoComponent,
     SessaoParceirosComponent,

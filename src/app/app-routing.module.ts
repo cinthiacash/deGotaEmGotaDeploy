@@ -8,13 +8,13 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { SubtemasEditComponent } from './edit/subtemas-edit/subtemas-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { FeedComponent } from './feed/feed.component';
+import { HomeComponent } from './home/home.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuUsuarioComponent } from './menu-usuario/menu-usuario.component';
 import { MenuComponent } from './menu/menu.component';
-
 import { PostagemComponent } from './postagem/postagem.component';
-=======
+
 import { SessaoContatoComponent } from './sessao-contato/sessao-contato.component';
 import { SessaoIdealizadorasComponent } from './sessao-idealizadoras/sessao-idealizadoras.component';
 import { SessaoMissaoComponent } from './sessao-missao/sessao-missao.component';
@@ -36,10 +36,10 @@ const routes: Routes = [
   {path: 'postagem', component: PostagemComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
-  {path: 'user-edit/:id', component: UserEditComponent}
+  {path: 'user-edit/:id', component: UserEditComponent},
   
  
-=======
+
   {path: 'home', component: HomeComponent},
   {path: 'sessao-ods', component: SessaoOdsComponent},
   {path: 'sessao-missao', component: SessaoMissaoComponent},
