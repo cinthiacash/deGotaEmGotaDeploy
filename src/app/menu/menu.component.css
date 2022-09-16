@@ -1,0 +1,67 @@
+
+.nav-bg{
+    background-color: #ffffff88;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    
+}
+
+.logo{
+    border-radius: 80px;
+}
+
+nav .menu .buttons button{
+    font-weight: 600;
+    transition: 1s;
+}
+
+nav .menu .buttons .btn-cadastrar{
+    background-color: var(--verde);
+}
+
+nav .menu ul li .nav-link{
+    position: relative;
+    padding: 0 10px;
+    margin: 0 10px;
+    letter-spacing: 0.5;
+}
+
+nav .menu ul li .nav-link:after{
+    content: "";
+    position: absolute;
+    background-color: var(--violeta);
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -32px;
+    transition: 0.3s;
+}
+
+nav .menu ul li .nav-link:hover:after{
+    width: 100%;
+}
+
+nav .menu ul li .nav-link:active:after{
+    width: 100%;
+}
+
+button:focus{
+    box-shadow: none;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+.fs-menu{
+    font-size: 24px;
+}
+.navbar-nav li a {
+    color:#055BA6;
+}
+
+.navbar-nav li a:hover{
+    transform: scale(1.1);
+    color: #fff;
+}

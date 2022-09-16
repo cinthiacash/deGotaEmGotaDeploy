@@ -1,6 +1,6 @@
 
 .bg{
-    background-image: url('https://i.imgur.com/guwAn30.jpg');
+    background-image: url('https://i.imgur.com/MarxxCK.jpg');
     
     background-repeat: no-repeat;
     background-position: center;
@@ -14,19 +14,19 @@
 }
 
 .caixa{
-    background-color: #5ba9d9b2;
-    border-radius: 5%;
+    background-color: rgba(231, 231, 231, 0.363);
+    border-radius: 20%;
     
 }
 
 .bg-m{
-    background-color: #ffffff77;
+    background-color: #366b99a2;
 }
 
 .font-c{
     
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #034e91;
+    color: #061e33;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: rgb(10, 10, 10);    
     
@@ -34,11 +34,13 @@
 }
 
 .c-c{
-    color: #034e91;
+    color: #0613ca;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color:#1c1d1c;
 }
 
 ::placeholder{
-    color: #034e91;
+    color: #010931;
 
 }
 
@@ -59,7 +61,17 @@ span{
     display: flex;
     align-items: center;
     padding-top: 12px;
+    color: #26f80a;
+}
+
+
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+
+
 }
 .form-group .form-control {
     padding-left: 2.375rem;
 }
+

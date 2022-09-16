@@ -1,63 +1,79 @@
-<div class="container-fluid bg">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 margem">
-                    <h2 class="text-center">Cadastre-se</h2> 
-                    <p class="text-center">para ter acesso aos conteúdos da plataforma!</p> 
+<div class="container-fluid bg d-flex justify-content-center">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+        
+            <div class="col-md-10 caixa">
+                <form class="mt-4 mb-5 mr-5 ml-5 text-white text-center">
 
-                <form>
+                    <h2 class="font-c">Cadastre-se!</h2>
+                    <p>E tenha acesso aos conteúdos da plataforma</p>
+
                     <div class="form-group">
-
                         <label for="nome"></label>
                         <span class="fa fa-user"></span>
-                        <input type="text" class="form-control borda bg-m icon" name="nome" id="nome"
+                        <input [(ngModel)]='user.nome' type="text" class="form-control borda bg-m icon" name="nome" id="nome"
                             placeholder="Digite seu nome">
                     </div>
                     <div class="form-group">
                         <label for="usuario"></label>
                         <span class="fa fa-envelope"></span>
-                        <input type="text" class="form-control borda bg-m" name="usuario" id="usuario"
+                        <input [(ngModel)]='user.usuario' type="text" class="form-control borda bg-m" name="usuario" id="usuario"
                             placeholder="Digite seu email ">
                     </div>
 
                     <div class="form-group">
                         <label for="senha"></label>
                         <span class="fa fa-lock"></span>
-                        <input type="password" class="form-control borda bg-m" name="senha" id="senha" placeholder="Digite sua senha">
+                        <input [(ngModel)]='user.senha' type="password" class="form-control borda bg-m" name="senha" id="senha"
+                            placeholder="Digite sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="foto"></label>
                         <span class="fa fa-link"></span>
-                        <input type="text" class="form-control borda bg-m" name="foto" id="foto"
+                        <input [(ngModel)]='user.foto' type="text" class="form-control borda bg-m" name="foto" id="foto"
                             placeholder="Link da sua foto">
                     </div>
 
-                    <div class="form-group">
+
+                    <div class="form-group" *ngIf="isCpf">
                         <label for="cpf"></label>
                         <span class="fa fa-id-card-o"></span>
-                        <input type="text" class="form-control borda bg-m" name="cpf" id="cpf"
-                            placeholder="Digite seu CPF ou CNPJ">
+                        <input [(ngModel)]='user.usuarioCpf' type="text" class="form-control borda bg-m" name="cpf" id="cpf"
+                            placeholder="Digite seu CPF" maxlength="11">
                     </div>
 
+                    <div class="form-group" *ngIf="!isCpf">
+                        <label for="cpf"></label>
+                        <span class="fa fa-id-card-o"></span>
+                        <input [(ngModel)]='user.usuarioCnpj' type="text" class="form-control borda bg-m" name="cpf" id="cpf"
+                            placeholder="Digite seu CNPJ" maxlength="14">
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" (change)="onChangeCheckBox()">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Clique aqui para CNPJ
+                        </label>
+                      </div>
+
                     <div>
-                        <button type="submit" class="btn btn-success borda container-fluid mt-4">CADASTRAR</button>
+                        <button type="submit" class="btn btn-success borda container-fluid mt-4" (click)="cadastrar()">CADASTRAR</button>
                     </div>
 
                     <div class="d-flex justify-content-center m-b">
-                        <p class="text-center mt-4">Já tem uma conta? <a class="c-c" routerLink="/login"><b>Conecte-se!</b></a></p> 
+                        <p class="text-center mt-4 ">Já tem uma conta? <a class="c-c"
+                                routerLink="/login"><b>Conecte-se!</b></a></p>
                     </div>
-
                 </form>
+
+
                 </div>
             </div>
         </div>
         <div class="col-md-8">
             <div class="row d-flex justify-content-end mr-5 ">
             <img class="montagem" src="https://i.imgur.com/LidhH12.png" alt="">
+
             </div>
-            
         </div>
     </div>
-</div>
