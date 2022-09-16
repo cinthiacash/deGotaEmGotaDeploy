@@ -8,6 +8,8 @@ import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { SubtemasService } from '../service/subtemas.service';
+import { Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-feed',
@@ -35,12 +37,15 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true
 
+  formulario: FormGroup
+
   constructor(
     private router: Router,
     private authService: AuthService,
     private subtemasService: SubtemasService,
     private postagemService: PostagemService,
     private alertas: AlertasService
+
 
   ) { }
 
@@ -54,6 +59,7 @@ export class FeedComponent implements OnInit {
 
     this.findAllSubtemas()
     this.findAllPostagens()
+    
   }
 
   findAllSubtemas(){

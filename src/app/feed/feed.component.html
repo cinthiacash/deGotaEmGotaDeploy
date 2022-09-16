@@ -13,80 +13,25 @@
         <div class="row d-flex justify-content-center mt-3">
           <button class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal"
             data-target="#todasPostagens" routerLink="/postagem">
-            <i class="fa fa-book pr-2 " aria-hidden="true" ></i> Encontrar Projetos
+            <i class="fa fa-book pr-2 " aria-hidden="true"></i> Encontrar Projetos
           </button>
-          <button class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal" data-target="#novoSubtema">
+          <button class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal"
+            data-target="#novoSubtema">
             <i class="fa fa-object-group pr-2" aria-hidden="true"></i> Todos Subtemas
           </button>
-          <button (click)="findByIdUser()" class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white" data-toggle="modal" data-target="#meusProjetos">
+          <button (click)="findByIdUser()" class="w-100 text-left btn btn-blue mx-3 my-1 px-3 text-white"
+            data-toggle="modal" data-target="#meusProjetos">
             <i class="fa fa-book text-cg-50 pr-2" aria-hidden="true"></i> Meus Projetos
           </button>
-          <button class="w-100 text-left btn btn-blue text-cg-600 mx-3 my-1 px-3 text-white" [routerLink]="['/user-edit', id]">
+          <button class="w-100 text-left btn btn-blue text-cg-600 mx-3 my-1 px-3 text-white"
+            [routerLink]="['/user-edit', id]">
             <i class="fa fa-pencil-square-o pr-2" aria-hidden="true"></i> Editar perfil
           </button>
         </div>
       </div>
 
-      <!-- * Modal Subtemas  -->
-      <div class="modal fade" id="novoSubtema" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header card">
-              <h5 class="modal-title" id="TituloModalCentralizado">Novo Subtema</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <input [(ngModel)]="subtema.descricao" type="text" class="form-control" id="titulo"
-                  placeholder="Digite o subtema">
-              </div>
-            </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info mr-2" data-dismiss="modal"
-                (click)="cadastrar()">Cadastrar</button>
-              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
-            </div>
-
-            <div class="container">
-              <div class="row mt-5">
-                <div class="col-md-12">
-                  <h2 class="text-center">Todos os Subtemas</h2>
-                </div>
-              </div>
-              <div class="mt-3 mb-5 d-flex justify-content-center">
-                <div class="col-md-12">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Descrição</th>
-                        <th scope="col" class="text-right">Modificações</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor='let item of listaSubtemas'>
-                        <td>{{item.descricao}}</td>
-                        <td class="d-flex justify-content-end">
-                          <button class="btn btn-info" data-dismiss="modal"
-                            [routerLink]="['/subtemas-edit', item.id]">Editar</button>
-                          <button class="btn btn-outline-danger ml-3" data-dismiss="modal"
-                            [routerLink]="['/subtemas-delete', item.id]">Apagar</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <!-- * Modal Subtemas  -->
 
     <!-- * Card de Postagem de Projeto-->
     <div class="col-md-8">
@@ -98,19 +43,17 @@
             <div class="card">
               <div class="card text-left">
                 <div class="card-body">
-                <div class="d-flex justify-content-center"><img src="{{foto}}"
-                  class="rounded-circle"
-                  width="10%"
-                  onerror="this.src = 'assets/img/user.png'">
-                <button type="button" class="w-100 btn btn-lg btn-block borda ml-4 text-white" data-toggle="modal"
-                data-target="#novaPostagem">Publicar um projeto</button></div>
-                <div class="d-flex justify-content-end">
-                <button class="btn btn-primary mr-4" data-toggle="modal"
-                data-target="#novaPostagem">Nova Postagem </button>
-                <button class="btn btn-primary" data-toggle="modal"
-                data-target="#novaPostagem">Publicar</button>
-              </div>
-                
+                  <div class="d-flex justify-content-center"><img src="{{foto}}" class="rounded-circle" width="10%"
+                      onerror="this.src = 'assets/img/user.png'">
+                    <button type="button" class="w-100 btn btn-lg btn-block borda ml-4 text-white" data-toggle="modal"
+                      data-target="#novaPostagem">Publicar um projeto</button>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary mr-4" data-toggle="modal" data-target="#novaPostagem">Nova Postagem
+                    </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#novaPostagem">Publicar</button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -118,102 +61,197 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- * Card de Postagem de Projeto-->
 
+      <!-- * Card de Postagem de Projeto-->
 
-    <!--Modal de Postagem-->
-    <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="novaPostagem" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header card">
-            <h5 class="modal-title" id="exampleModalLabel">Cadastre um novo Projeto</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+      <!-- * Card de Postagem Feed-->
 
-            <div class="form-group">
-              <label for="titulo"><b>Título</b>*</label>
-              <input [(ngModel)]='postagem.titulo'  type="text" class="form-control" id="titulo"
-                placeholder="Digite o título">
+      
+      <div class="col-md-12 mt-5">
+        <div class="row card pt-2 pb-2 mb-4" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+          
+          <div class="row col-md-8 d-flex d-flex justify-content-start">
+            <img [src]=item.usuarios.foto class="rounded-circle ml-3 mt-3" width="60px" height="60px"
+              onerror="this.src = 'assets/img/user.png'"> 
+            
             </div>
-
-            <div class="form-group">
-              <label for="texto"><b>Texto</b>*</label>
-              <textarea [(ngModel)]='postagem.texto'  class="form-control" name="texto" id="texto" rows="3" placeholder="Descreva aqui o projeto"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="titulo"><b>Link da foto</b>*</label>
-              <input [(ngModel)]='postagem.foto'  type="text" class="form-control" id="titulo"
-                placeholder="Insira aqui o link da imagem">
-            </div>
-
-            <div class="form-group">
-              <label for="texto"><b>Escolha um tema cadastrado:</b> 
-              </label>
-              <select name="tema" id="tema" class="form-control" [(ngModel)]='idSubtema' (change)='findByIdSubtema()'>
-                <option *ngFor='let item of listaSubtemas' value="{{item.id}}">{{item.descricao}}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-info" (click)='publicar()'  data-dismiss="modal">Publicar</button>
+          <div class="card-body text-center ">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <small class="text-muted"> Tema: {{item.subtemas.descricao}}</small>
+            <p class="card-text mt-3">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">
+                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+              </small></p>
+            <p class="card-text">
+              <small class="text-muted">by: {{item.usuarios.usuario}}</small>
+            </p>
+            <ng-container *ngIf="item.foto != null">
+              <img [src]=item.foto alt="" width="300px" height="300px" class="img-fluid">
+            </ng-container>
           </div>
         </div>
       </div>
+    
+      <!-- * Card de Postagem Feed-->
+
+
     </div>
-    <!--Modal de Postagem-->
-
-
-    <!-- * Modal Meus Projetos  -->
-
-    <div class="modal fade" id="meusProjetos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header card">
-              <h5 class="modal-title" id="TituloModalCentralizado">Meus Projetos</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="container">
-              <div class="mb-5 d-flex justify-content-center">
-                <div class="col-md-12">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Título</th>
-                        <th scope="col" class="text-right">Modificações</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor='let item of user.postagens'>
-                        <td>{{item.titulo}}</td>
-                        <td class="d-flex justify-content-end">
-                          <button class="btn btn-info" data-dismiss="modal"
-                            [routerLink]="['/postagem-edit', item.id]">Editar</button>
-                          <button class="btn btn-outline-danger ml-3" data-dismiss="modal"
-                            [routerLink]="['/postagem-delete', item.id]">Apagar</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- * Modal Subtemas  -->
-
-
   </div>
+</div>
+
+
+
+
+
+<!-- * Modal Subtemas  -->
+<div class="modal fade" id="novoSubtema" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header card">
+        <h5 class="modal-title" id="TituloModalCentralizado">Novo Subtema</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input [(ngModel)]="subtema.descricao" type="text" class="form-control" id="titulo"
+            placeholder="Digite o subtema">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info mr-2" data-dismiss="modal" (click)="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+      </div>
+
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <h2 class="text-center">Todos os Subtemas</h2>
+          </div>
+        </div>
+        <div class="mt-3 mb-5 d-flex justify-content-center">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Descrição</th>
+                  <th scope="col" class="text-right">Modificações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let item of listaSubtemas'>
+                  <td>{{item.descricao}}</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-info" data-dismiss="modal"
+                      [routerLink]="['/subtemas-edit', item.id]">Editar</button>
+                    <button class="btn btn-outline-danger ml-3" data-dismiss="modal"
+                      [routerLink]="['/subtemas-delete', item.id]">Apagar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Modal de Postagem-->
+<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="novaPostagem" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header card">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastre um novo Projeto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="titulo"><b>Título</b>*</label>
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+            placeholder="Digite o título" required>
+        </div>
+
+        <div class=" form-group">
+          <label for="texto"><b>Texto</b>*</label>
+          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"
+            placeholder="Descreva aqui o projeto" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="titulo"><b>Link da foto</b>*</label>
+          <input [(ngModel)]='postagem.foto' type="text" class="form-control" id="foto"
+            placeholder="Insira aqui o link da imagem" required>
+        </div>
+
+        <div class="form-group">
+          <label for="texto"><b>Escolha um tema cadastrado:</b>
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idSubtema' (change)='findByIdSubtema()'
+            required>
+            <option *ngFor='let item of listaSubtemas' value="{{item.id}}">{{item.descricao}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-info" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Modal de Postagem-->
+
+
+
+<!-- * Modal Meus Projetos  -->
+
+<div class="modal fade" id="meusProjetos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header card">
+        <h5 class="modal-title" id="TituloModalCentralizado">Meus Projetos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="mb-5 d-flex justify-content-center">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Título</th>
+                  <th scope="col" class="text-right">Modificações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let item of user.postagens'>
+                  <td>{{item.titulo}}</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-info" data-dismiss="modal"
+                      [routerLink]="['/postagem-edit', item.id]">Editar</button>
+                    <button class="btn btn-outline-danger ml-3" data-dismiss="modal"
+                      [routerLink]="['/postagem-delete', item.id]">Apagar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- * Modal Subtemas  -->
