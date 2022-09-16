@@ -88,14 +88,14 @@ export class FeedComponent implements OnInit {
     this.subtemasService.postSubtema(this.subtema).subscribe({
       next: (resp:Subtema) =>{
       this.subtema = resp
-      this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Subtema cadastrado com sucesso!')
       this.subtema = new Subtema()
       this.findAllSubtemas()
 
       },
       error: (erro) => {
         if(erro.status == 400){
-          this.alertas.showAlertDanger('Tema não pode ser cadastrado pois já existe um tema com está descrição');
+          this.alertas.showAlertDanger('O subtema não pode ser cadastrado pois já existe!');
         }
       },
     })
@@ -111,7 +111,7 @@ export class FeedComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
       this.postagem = resp
-      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Projeto publicado com sucesso!')
       this.postagem = new Postagem()
       this.findAllPostagens()
 

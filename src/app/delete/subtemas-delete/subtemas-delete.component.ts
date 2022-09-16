@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subtema } from 'src/app/model/Subtema';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { SubtemasService } from 'src/app/service/subtemas.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -17,7 +18,8 @@ export class SubtemasDeleteComponent implements OnInit {
   constructor(
     private subtemaService: SubtemasService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
 
   ) { }
 
@@ -38,7 +40,7 @@ export class SubtemasDeleteComponent implements OnInit {
 
   apagar(){
     this.subtemaService.deleteSubtema(this.idSubtema).subscribe(()=>{
-      alert('Tema apagado com sucesso!')
+      this.alertas.showAlertDanger('Tema apagado com sucesso!')
       this.router.navigate(['/feed'])
     })
   }
