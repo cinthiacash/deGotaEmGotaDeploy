@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
 
-    height: 935px;
+    height: 937px;
 }
 
 .margem{
@@ -46,7 +46,7 @@
 
 
 .color-b{
-    background-color: #034e91;
+    background-color: #02182c;
 }
 
 .texto {
@@ -70,7 +70,7 @@ span{
 }
 
 
-}
+
 .form-group .form-control {
     padding-left: 2.375rem;
 }

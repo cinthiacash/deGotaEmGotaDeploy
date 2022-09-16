@@ -38,10 +38,6 @@ export class LoginComponent implements OnInit {
 
 
       this.router.navigate(['/feed'])
-===
-
-      this.router.navigate(['/postagem'])
-
 
     }, erro =>{
       if(erro.status == 401 || erro.status == 500){
