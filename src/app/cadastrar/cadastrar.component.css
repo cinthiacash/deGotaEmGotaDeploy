@@ -22,11 +22,8 @@
 .font-c{
     
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:#f8fafc;  
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(66, 76, 165);  
-    
-    
+    color:#ffffff;  
+   
 }
 
 .c-c{
@@ -36,7 +33,7 @@
 }
 
 ::placeholder{
-    color: #d8e1e7;
+    color: #ffffff;
 
 }
 
@@ -64,9 +61,7 @@ span{
 .caixa{
     background-color: rgba(231, 231, 231, 0.363);
     border-radius: 20px;
-
-   
-   
+  
 }
 
 

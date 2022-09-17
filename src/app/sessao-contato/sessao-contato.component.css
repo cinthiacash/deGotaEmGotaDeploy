@@ -13,3 +13,15 @@
     font-style: bold;
     
 }
+
+input {
+ border-radius: 20px;
+}
+
+textarea {
+    border-radius: 20px;
+}
+
+.btn {
+    border-radius: 20px;
+}

@@ -27,13 +27,14 @@
     background-color: #366b99a2;
 }
 
+.borda{
+    border-radius: 20px;
+
+}
 .font-c {
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #061e33;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(10, 10, 10);
-
 
 }
 
